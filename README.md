@@ -12,20 +12,22 @@ Super Simple Powershell Logging Module.
 
 
 # Examples
-## Simplest example
+### Simplest example
 ```powershell
 import-module .\log_this\log_this.psm1
 log_this "A folder was just created containing today's date, hour, and minute.  It is located in the log_this directory."
+```
 
-## Set the name of the log file
+### Set the name of the log file
 ```powershell
 import-module .\log_this\log_this.psm1
 $null = ( set_log_file_base_name 'oaken_log' )
 log_this "Now, all files will begin with 'oaken_log'"
+```
 
-
-## Set the location of the log file
+### Set the location of the log file
 ```powershell
 import-module .\log_this\log_this.psm1
 $null = ( set_log_folder "$PSScriptRoot\Logs\" )
 log_this "Now, all the logs will be in 'my' Logs directory.  Nope, the logger will not create the directory named Logs."
+```
